@@ -83,23 +83,23 @@ export default function Hero({ onNavClick }) {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between pb-12 pt-28 border-b-4 border-black bg-transparent" style={{ marginTop: '40px' }}>
+    <section className="relative w-full min-h-screen flex flex-col justify-between pb-12 pt-28 border-b-4 border-black bg-transparent" style={{ marginTop: '100px' }}>
       {/* Floating Header */}
       <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b-[3px] border-black z-40 px-4 sm:px-8 py-3">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Logo />
 
           {/* Socials capsule navigation */}
-          <div className="hidden md:flex items-center gap-1 bg-[#0f172a]/5 border-[2px] border-black rounded-full p-1.5">
+          <div className="hidden md:flex items-center gap-2 bg-[#0f172a]/5 border-[2px] border-black rounded-full p-1.5">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white border-[2px] border-black rounded-full text-slate-800 hover:bg-blue-600 hover:text-white transition-all hover:scale-105 flex items-center justify-center" title="LinkedIn">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <svg className="w-7 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
-            <a href="mailto:contact@vraiseventures.com" className="p-2 bg-white border-[2px] border-black rounded-full text-slate-800 hover:bg-pink-500 hover:text-white transition-all hover:scale-105" title="Email Us">
-              <Mail className="w-4 h-4" />
+            <a href="mailto:team@vraiseventures.org" className="p-2 bg-white border-[2px] border-black rounded-full text-slate-800 hover:bg-pink-500 hover:text-white transition-all hover:scale-105" title="Email Us">
+              <Mail className="w-7 h-4" />
             </a>
 
             <button onClick={() => onNavClick('faq')} className="p-2 bg-white border-[2px] border-black rounded-full text-slate-800 hover:bg-yellow-400 transition-all hover:scale-105" title="Schedule Call">
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-7 h-4" />
             </button>
           </div>
 
@@ -115,8 +115,13 @@ export default function Hero({ onNavClick }) {
       </header>
 
       {/* Hero Body Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col items-center text-center mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col items-center text-center mt-8 relative">
         
+        {/* Centered Logo in Hero */}
+        <div className="absolute top-[-56px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
+          <Logo className="h-12 sm:h-14 w-auto" />
+        </div>
+
         {/* Giant Heading */}
         <div className="relative mb-8 max-w-5xl">
           {/* Floating Bubble Left */}
