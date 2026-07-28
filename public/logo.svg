@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <defs>
+    <!-- Left sails gradient: Dark Blue to Cyan -->
+    <linearGradient id="leftSailsGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1e4c" />
+      <stop offset="60%" stop-color="#1e54a3" />
+      <stop offset="100%" stop-color="#00a8e8" />
+    </linearGradient>
+    
+    <!-- Right sails gradient: Mid Blue to Sky Blue -->
+    <linearGradient id="rightSailsGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    
+    <!-- Dynamic Arrow Gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="80%" x2="80%" y2="0%">
+      <stop offset="0%" stop-color="#091b3f" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(0, 10)">
+    <!-- Horizon Curve Base -->
+    <path d="M 100,240 C 220,255 380,255 500,240 C 420,245 280,245 100,240 Z" fill="#0f172a" />
+    
+    <!-- Left Group Sails (Overlapping) -->
+    <!-- Sail 1 (leftmost, small) -->
+    <path d="M 160,230 C 175,190 205,170 230,170 C 215,195 195,215 180,233 Z" fill="url(#leftSailsGrad)" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- Sail 2 -->
+    <path d="M 190,233 C 210,175 240,145 280,145 C 255,185 230,215 215,236 Z" fill="url(#leftSailsGrad)" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- Sail 3 -->
+    <path d="M 225,236 C 250,155 290,115 340,115 C 310,165 275,210 255,239 Z" fill="url(#leftSailsGrad)" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- Sail 4 (largest left sail) -->
+    <path d="M 260,239 C 290,120 340,70 410,70 C 370,140 325,200 295,241 Z" fill="url(#leftSailsGrad)" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Right Group Sails -->
+    <!-- Sail 1 (small right) -->
+    <path d="M 370,241 C 390,205 415,195 430,200 C 415,215 395,230 385,242 Z" fill="url(#rightSailsGrad)" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Sail 2 (mid right) -->
+    <path d="M 395,242 C 420,195 450,180 470,190 C 450,210 425,230 410,242 Z" fill="url(#rightSailsGrad)" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Sail 3 (large right) -->
+    <path d="M 420,242 C 450,180 490,160 515,175 C 485,200 455,225 435,242 Z" fill="url(#rightSailsGrad)" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Upward Sweeping Growth Arrow -->
+    <path d="M 215,234 C 265,205 340,155 410,95 L 365,90 L 425,65 L 430,125 L 400,110 C 330,165 255,220 215,234 Z" fill="url(#arrowGrad)" stroke="#000000" stroke-width="3" stroke-linejoin="round" />
+  </g>
+</svg>

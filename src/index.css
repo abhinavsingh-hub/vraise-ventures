@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --neo-blue: #2563eb;
+  --neo-blue-light: #3b82f6;
+  --neo-pink: #ec4899;
+  --neo-yellow: #facc15;
+  --neo-green: #22c55e;
+  --neo-dark: #0f172a;
+  --neo-bg: #f8fafc;
+  --neo-white: #ffffff;
+  
+  --border-width: 3px;
+  --border-color: #000000;
+  --border-neo: var(--border-width) solid var(--border-color);
+  
+  --shadow-offset: 4px;
+  --shadow-offset-large: 8px;
+  --shadow-neo: var(--shadow-offset) var(--shadow-offset) 0px var(--border-color);
+  --shadow-neo-large: var(--shadow-offset-large) var(--shadow-offset-large) 0px var(--border-color);
+  --shadow-neo-blue: var(--shadow-offset) var(--shadow-offset) 0px var(--neo-blue);
+  --shadow-neo-pink: var(--shadow-offset) var(--shadow-offset) 0px var(--neo-pink);
+  --shadow-neo-yellow: var(--shadow-offset) var(--shadow-offset) 0px var(--neo-yellow);
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: default;
+}
+
+body {
+  background-color: var(--neo-bg);
+  color: var(--neo-dark);
+  overflow-x: hidden;
+  /* Grid paper background */
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--neo-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--neo-bg);
+  border-left: var(--border-neo);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neo-dark);
+  border: 3px solid var(--neo-bg);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neo-blue);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--neo-yellow);
+  color: var(--neo-dark);
+}
+
+/* Neobrutalist Utilities */
+.neo-card {
+  background-color: var(--neo-white);
+  border: var(--border-neo);
+  box-shadow: var(--shadow-neo);
+  border-radius: 0px;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-neo-large);
+}
+
+.neo-card-blue {
+  background-color: var(--neo-blue);
+  color: var(--neo-white);
+}
+.neo-card-pink {
+  background-color: var(--neo-pink);
+  color: var(--neo-white);
+}
+.neo-card-yellow {
+  background-color: var(--neo-yellow);
+  color: var(--neo-dark);
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  background-color: var(--neo-white);
+  border: var(--border-neo);
+  box-shadow: var(--shadow-neo);
+  color: var(--neo-dark);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-neo-large);
+  background-color: var(--neo-yellow);
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.neo-btn-primary {
+  background-color: var(--neo-blue);
+  color: var(--neo-white);
+}
+.neo-btn-primary:hover {
+  background-color: var(--neo-blue-light);
+  color: var(--neo-white);
+}
+
+.neo-btn-secondary {
+  background-color: var(--neo-pink);
+  color: var(--neo-white);
+}
+.neo-btn-secondary:hover {
+  background-color: #f472b6;
+  color: var(--neo-white);
+}
+
+.neo-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  border: var(--border-neo);
+  background-color: var(--neo-white);
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+/* Custom Cursor Tracker */
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--neo-dark);
+  background-color: var(--neo-yellow);
+  box-shadow: 2px 2px 0px var(--neo-dark);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) rotate(15deg);
+  transition: transform 0.05s ease;
+  display: none;
+}
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+  .custom-cursor {
+    display: block;
+  }
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Infinite Marquee */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  background-color: var(--neo-yellow);
+  border-top: var(--border-neo);
+  border-bottom: var(--border-neo);
+  padding: 12px 0;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll-left 25s linear infinite;
+}
+
+.marquee-content span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--neo-dark);
+  margin-right: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-content span::after {
+  content: '★';
+  margin-left: 32px;
+  color: var(--neo-pink);
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-reverse .marquee-content {
+  animation-direction: reverse;
+  background-color: var(--neo-pink);
+  color: var(--neo-white);
+}
+
+.marquee-reverse .marquee-content span {
+  color: var(--neo-white);
+}
+.marquee-reverse .marquee-content span::after {
+  color: var(--neo-yellow);
+}
+
+/* Speech bubbles */
+.speech-bubble {
+  position: relative;
+  background: var(--neo-white);
+  border: var(--border-neo);
+  padding: 16px;
+  box-shadow: var(--shadow-neo);
+  font-weight: 600;
+  font-size: 0.875rem;
+  max-width: 220px;
+}
+
+.speech-bubble::after, .speech-bubble::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble-left::after {
+  top: 100%;
+  left: 20px;
+  border-width: 10px 10px 0 0;
+  border-color: var(--neo-white) transparent transparent transparent;
+}
+.speech-bubble-left::before {
+  top: 100%;
+  left: 18px;
+  border-width: 13px 13px 0 0;
+  border-color: var(--border-color) transparent transparent transparent;
+}
+
+.speech-bubble-right::after {
+  top: 100%;
+  right: 20px;
+  border-width: 10px 0 0 10px;
+  border-color: var(--neo-white) transparent transparent transparent;
+}
+.speech-bubble-right::before {
+  top: 100%;
+  right: 18px;
+  border-width: 13px 0 0 13px;
+  border-color: var(--border-color) transparent transparent transparent;
+}
+
+/* Scrollytelling Styles */
+.journey-sticky-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .journey-sticky-container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.sticky-visual-wrapper {
+  position: sticky;
+  top: 120px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .sticky-visual-wrapper {
+    height: calc(100vh - 240px);
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-anim-delayed {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Mindmap linkages */
+.mindmap-node {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.mindmap-node:hover {
+  transform: scale(1.08) translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+/* ==========================================================================
+   Robust Layout and Centering Overrides (Pixel-perfect browser fallbacks)
+   ========================================================================== */
+
+/* Centering */
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Sizing */
+.w-full { width: 100% !important; }
+.h-full { height: 100% !important; }
+.max-w-6xl { max-width: 1152px !important; }
+.max-w-7xl { max-width: 1280px !important; }
+
+/* Grid Gaps */
+.gap-2 { gap: 8px !important; }
+.gap-3 { gap: 12px !important; }
+.gap-4 { gap: 16px !important; }
+.gap-6 { gap: 24px !important; }
+.gap-8 { gap: 32px !important; }
+.gap-10 { gap: 40px !important; }
+.gap-12 { gap: 48px !important; }
+
+/* Margin Spacing */
+.mt-4 { margin-top: 16px !important; }
+.mt-6 { margin-top: 24px !important; }
+.mt-8 { margin-top: 32px !important; }
+.mt-10 { margin-top: 40px !important; }
+.mt-12 { margin-top: 48px !important; }
+.mb-2 { margin-bottom: 8px !important; }
+.mb-4 { margin-bottom: 16px !important; }
+.mb-6 { margin-bottom: 24px !important; }
+.mb-8 { margin-bottom: 32px !important; }
+.mb-10 { margin-bottom: 40px !important; }
+.mb-12 { margin-bottom: 48px !important; }
+.mb-16 { margin-bottom: 64px !important; }
+.my-12 { margin-top: 48px !important; margin-bottom: 48px !important; }
+.my-16 { margin-top: 64px !important; margin-bottom: 64px !important; }
+
+/* Padding Spacing */
+.p-4 { padding: 16px !important; }
+.p-6 { padding: 24px !important; }
+.p-8 { padding: 32px !important; }
+.p-10 { padding: 40px !important; }
+.p-12 { padding: 48px !important; }
+.py-12 { padding-top: 48px !important; padding-bottom: 48px !important; }
+.py-16 { padding-top: 64px !important; padding-bottom: 64px !important; }
+.px-6 { padding-left: 24px !important; padding-right: 24px !important; }
+.px-8 { padding-left: 32px !important; padding-right: 32px !important; }
+
