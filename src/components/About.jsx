@@ -15,7 +15,7 @@ export default function About() {
                 OUR INVESTMENT THESIS
               </span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
+            <h2 className="text-4xl sm:text-5xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
               Great Investments Begin Long Before the First Pitch.
             </h2>
           </div>

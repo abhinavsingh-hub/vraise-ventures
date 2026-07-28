@@ -107,19 +107,16 @@ export default function Hero({ onNavClick }) {
             <button onClick={() => onNavClick('footer')} className="neo-btn neo-btn-primary text-xs tracking-wider py-2.5 px-5">
               Pitch Us
             </button>
-            <button onClick={() => onNavClick('journey')} className="hidden sm:block neo-btn neo-badge font-sans text-xs tracking-wider py-2.5 px-5 bg-yellow-400 hover:bg-yellow-500">
-              Menu
-            </button>
           </div>
         </div>
       </header>
 
       {/* Hero Body Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col items-center text-center mt-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col items-center text-center relative" style={{ marginTop: '40px' }}>
         
         {/* Centered Logo in Hero */}
         <div className="absolute top-[-56px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
-          <Logo className="h-12 sm:h-14 w-auto" />
+          <Logo className="h-18 sm:h-40 w-auto" />
         </div>
 
         {/* Giant Heading */}
@@ -137,13 +134,14 @@ export default function Hero({ onNavClick }) {
           <motion.h1
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
+            whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
             className="text-5xl sm:text-7xl md:text-8xl font-black uppercase text-[#0f172a] leading-[0.95] tracking-tighter"
           >
-            We Offer <br />
-            <span className="bg-yellow-400 border-b-4 border-black px-2 inline-block transform rotate-1">JAW-DROPPING</span> <br />
+            We Scout <br />
+            <span className="bg-yellow-400 border-b-4 border-black px-2 inline-block transform rotate-1">We Build</span> <br />
             <span className="text-blue-600 font-extrabold relative">
-              Scouting Network
+              We Raise
             </span>
           </motion.h1>
 

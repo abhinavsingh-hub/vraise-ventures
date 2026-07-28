@@ -110,7 +110,7 @@ export default function NetworkMap() {
             </span>
           </div>
           <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter mb-6">
-            Embedded Where Innovation Begins.
+            We are <span className="text-[#2857bdff]">embedded </span> Where <span className="text-[#2857bdff]">Innovation</span> Begins.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
             VRaise’s distributed scout network operates across leading universities, research institutions, founder communities, and startup ecosystems—creating early access to exceptional entrepreneurs before they reach the broader market.
@@ -127,11 +127,11 @@ export default function NetworkMap() {
               <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">VC Partners</p>
             </div>
             <div className="p-4 border-[2.5px] border-black bg-yellow-50 shadow-[3px_3px_0px_#000] text-center">
-              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1.5 pt-1.5">India & Australia</h4>
-              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Regional Hubs</p>
+              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1 pt-3">APAC</h4>
+              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Region</p>
             </div>
             <div className="p-4 border-[2.5px] border-black bg-emerald-50 shadow-[3px_3px_0px_#000] text-center">
-              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1.5 pt-1.5">Pre-Seed • Seed</h4>
+              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1.5 pt-1.5">PreSeed - Series A</h4>
               <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Stage Focus</p>
             </div>
           </div>

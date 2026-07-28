@@ -51,7 +51,7 @@ export default function Footer({ onNavClick }) {
           <span className="neo-badge bg-[#facc15] text-black font-extrabold text-xs mb-6 shadow-none border-[2.5px] border-black">
             LET’S BUILD TOGETHER
           </span>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-white leading-none tracking-tighter max-w-5xl mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-black uppercase text-white leading-none tracking-tighter max-w-5xl mb-6" style={{color:"#ffffff"}}>
             Exceptional Companies Deserve Exceptional Partners.
           </h2>
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-12 font-medium">

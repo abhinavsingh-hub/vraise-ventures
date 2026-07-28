@@ -29,7 +29,7 @@ export default function WhatWeDo() {
       shadow: "hover:shadow-[8px_8px_0px_#eab308]"
     },
     {
-      title: "Strategic Introductions",
+      title: "Strategic Intros",
       desc: "We prioritize long-term alignment over transactional deal flow.",
       icon: <Lightbulb className="w-8 h-8 text-emerald-600" />,
       bg: "bg-emerald-50",
@@ -45,12 +45,12 @@ export default function WhatWeDo() {
         {/* Header Block */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="mb-4">
-            <span className="neo-badge bg-[#ec4899] text-white font-extrabold text-xs">
+            <span className="neo-badge bg-[#ec4899] text-black font-extrabold text-xs">
               WHY VRAISE
             </span>
           </div>
           <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter mb-6">
-            Built for Institutional-Quality Venture Discovery.
+            Built for <span className="text-[#ec4899]">Institutional-Quality </span>Venture <span className="text-[#ec4899]">Discovery.</span>
           </h2>
         </div>
 

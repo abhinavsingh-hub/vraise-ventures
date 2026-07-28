@@ -322,7 +322,7 @@ export default function Journey() {
 
         {/* Section Header */}
         <div className="mb-16">
-          <span className="neo-badge bg-pink-500 text-white font-extrabold text-xs mb-3">
+          <span className="neo-badge bg-pink-500 text-black font-extrabold text-xs mb-3">
             OUR PROCESS
           </span>
           <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
@@ -364,7 +364,7 @@ export default function Journey() {
                   <span className={`font-mono text-3xl font-black ${s.accent}`}>
                     {s.num}
                   </span>
-                  <span className="neo-badge text-xs font-mono font-bold py-1 px-3 bg-slate-900 text-white border-2 border-black shadow-none">
+                  <span className="neo-badge text-xs font-mono font-bold py-1 px-3 bg-slate-900 text-black border-2 border-black shadow-none">
                     {s.phase}
                   </span>
                 </div>

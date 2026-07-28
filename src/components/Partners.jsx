@@ -15,8 +15,8 @@ export default function Partners() {
         <span className="neo-badge bg-[#ec4899] text-white font-extrabold text-[10px] tracking-wider mb-6">
           TRUSTED BY
         </span>
-        <h3 className="text-2xl sm:text-4xl font-black uppercase text-[#0f172a] mb-8 font-sans tracking-tight text-center">
-          Working Alongside Leading Venture Investors.
+        <h3 className="text-xl sm:text-2xl font-black uppercase text-[#0f172a] mb-8 font-sans tracking-tight text-center">
+          Some of Our Partner Funds & Syndicates
         </h3>
         
         {/* Logos Grid */}

@@ -45,12 +45,12 @@ export default function WhoWeServe() {
         {/* Header Block */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="mb-4">
-            <span className="neo-badge bg-[#3b82f6] text-white font-extrabold text-xs">
-              WHO WE SERVE
+            <span className="neo-badge bg-[#3b82f6] text-black font-extrabold text-xs">
+              WHAT WE DO
             </span>
           </div>
-          <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
-            Connecting Exceptional Founders With Long-Term Capital.
+          <h2 className="text-4xl sm:text-5xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
+            Bridging <span style={{color:'#2857bdff'}}>Visionary Founders</span> With <span style={{color:'#2857bdff'}}>Exceptional Investors.</span>
           </h2>
         </div>
 
