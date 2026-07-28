@@ -6,6 +6,7 @@ import Partners from './components/Partners';
 import About from './components/About';
 import MarqueeDivider from './components/MarqueeDivider';
 import WhatWeDo from './components/WhatWeDo';
+import WhoWeServe from './components/WhoWeServe';
 import Journey from './components/Journey';
 import NetworkMap from './components/NetworkMap';
 import FAQ from './components/FAQ';
@@ -38,20 +39,16 @@ export default function App() {
 
   return (
     <>
-      {/* Intro Pre-loader CLI screen */}
       <AnimatePresence>
-        {loading && (
-          <Preloader onComplete={() => setLoading(false)} />
-        )}
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
       {!loading && (
-        <div className="relative w-full min-h-screen selection:bg-yellow-400 selection:text-black">
-          
-          {/* Neobrutalist Custom Cursor (Desktop only) */}
+        <div className="min-h-screen bg-transparent relative selection:bg-yellow-300 selection:text-black">
+          {/* Custom Cursor Circle */}
           <div 
-            className="custom-cursor" 
-            style={{ 
+            className="hidden md:block fixed w-8 h-8 rounded-full border-2 border-black pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400/20 shadow-[2px_2px_0px_#000]"
+            style={{
               left: `${mousePos.x}px`, 
               top: `${mousePos.y}px` 
             }}
@@ -61,10 +58,10 @@ export default function App() {
           <Hero onNavClick={scrollToSection} />
           
           <div className="h-12 w-full" />
-          <Partners />
+          <About />
           
           <div className="h-12 w-full" />
-          <About />
+          <Journey />
           
           <div className="h-16 w-full" />
           <MarqueeDivider />
@@ -73,10 +70,13 @@ export default function App() {
           <WhatWeDo />
           
           <div className="h-12 w-full" />
-          <Journey />
+          <WhoWeServe />
           
           <div className="h-12 w-full" />
           <NetworkMap />
+          
+          <div className="h-12 w-full" />
+          <Partners />
           
           <div className="h-12 w-full" />
           <FAQ />

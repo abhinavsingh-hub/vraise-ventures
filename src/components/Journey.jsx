@@ -6,36 +6,36 @@ const STEPS = [
   {
     num: "01",
     phase: "DISCOVER",
-    title: "Scout on Campus",
-    desc: "Our campus scouts are embedded deep inside student labs, developer communities, and startup incubators. They surface promising founders at the earliest possible stage—often before they even write their first line of code.",
+    title: "Discover",
+    desc: "Exceptional founders identified through universities, startup ecosystems, operators, and research communities.",
     accent: "text-yellow-400"
   },
   {
     num: "02",
     phase: "VALIDATE",
-    title: "Traction & Team Vetting",
-    desc: "We screen every opportunity rigorously. We stress-test the market size, evaluate engineering talent, check early metrics, and ensure the founders have the resilience required to scale.",
+    title: "Validate",
+    desc: "Every opportunity undergoes structured screening, founder evaluation, and market assessment.",
     accent: "text-pink-500"
   },
   {
     num: "03",
     phase: "PREPARE",
-    title: "IC Readiness Refinement",
-    desc: "We work directly with founders to rebuild pitch decks, build detailed financial models, construct data rooms, and compile institutional-grade diligence materials. We prepare you to face investment committees with confidence.",
+    title: "Prepare",
+    desc: "Institutional-quality pitch materials, fundraising strategy, financial models, and diligence preparation.",
     accent: "text-blue-500"
   },
   {
     num: "04",
     phase: "CONNECT",
-    title: "Investor Matchmaking",
-    desc: "We match and introduce companies to partner venture capital funds, angel syndicates, and family offices that share the specific investment thesis. Warm, direct introductions to decision-makers.",
+    title: "Connect",
+    desc: "Targeted introductions to investors whose thesis, sector, and stage align with the opportunity.",
     accent: "text-emerald-500"
   },
   {
     num: "05",
     phase: "RAISE",
-    title: "Close & Support",
-    desc: "We assist founders throughout the diligence process, helping answer investor questions, review term sheets, configure round valuations, and close the deal.",
+    title: "Raise",
+    desc: "Hands-on support throughout fundraising, diligence, negotiations, and successful round closure.",
     accent: "text-violet-500"
   }
 ];
@@ -46,10 +46,10 @@ export default function Journey() {
 
   useEffect(() => {
     const observers = [];
-    
+
     stepRefs.current.forEach((ref, index) => {
       if (!ref) return;
-      
+
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -63,7 +63,7 @@ export default function Journey() {
           threshold: 0.1
         }
       );
-      
+
       observer.observe(ref);
       observers.push(observer);
     });
@@ -89,7 +89,7 @@ export default function Journey() {
               <span className="font-mono text-xs text-yellow-400">STATUS: SCANNING_CAMPUSES</span>
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-ping"></span>
             </div>
-            
+
             {/* Visual: Campus nodes grid */}
             <div className="flex-grow flex items-center justify-center relative">
               <div className="grid grid-cols-4 gap-6 relative p-4 bg-black/40 border border-white/10 rounded-lg">
@@ -104,7 +104,7 @@ export default function Journey() {
                   </div>
                 ))}
               </div>
-              
+
               {/* Radar locator sweep */}
               <div className="absolute w-24 h-24 border-[2px] border-dashed border-yellow-400/40 rounded-full animate-[spin_8s_linear_infinite] flex items-center justify-center">
                 <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full shadow-[0_0_8px_#facc15] translate-x-12"></div>
@@ -130,7 +130,7 @@ export default function Journey() {
               <span className="font-mono text-xs text-pink-500">STATUS: CORE_VETTING</span>
               <span className="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
             </div>
-            
+
             {/* Visual: Progress evaluation bars */}
             <div className="flex-grow flex flex-col justify-center gap-4 px-4">
               <div className="flex flex-col gap-1.5">
@@ -183,7 +183,7 @@ export default function Journey() {
               <span className="font-mono text-xs text-blue-400">STATUS: COMPILING_MATERIALS</span>
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
             </div>
-            
+
             {/* Visual: Compilation file decks */}
             <div className="flex-grow flex items-center justify-center relative overflow-hidden">
               <motion.div
@@ -201,7 +201,7 @@ export default function Journey() {
                   <div className="h-2 bg-slate-300 rounded-sm w-5/6"></div>
                 </div>
               </motion.div>
-              
+
               {/* Overlapping model board */}
               <motion.div
                 animate={{ rotate: [3, -3, 3] }}
@@ -238,7 +238,7 @@ export default function Journey() {
               <span className="font-mono text-xs text-emerald-400">STATUS: MATCHING_PARTNERS</span>
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
             </div>
-            
+
             {/* Visual: Routing match connections */}
             <div className="flex-grow flex items-center justify-center relative">
               <div className="flex items-center gap-12 relative">
@@ -246,7 +246,7 @@ export default function Journey() {
                 <div className="w-12 h-12 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center shadow-[0_0_15px_#10b981]">
                   <Database className="w-5 h-5 text-white" />
                 </div>
-                
+
                 {/* Connecting arrows */}
                 <div className="flex flex-col gap-6 font-mono text-[10px]">
                   <div className="flex items-center gap-2">
@@ -284,7 +284,7 @@ export default function Journey() {
               <span className="font-mono text-xs text-violet-400">STATUS: ROUND_CLOSE</span>
               <span className="w-2.5 h-2.5 rounded-full bg-violet-500 animate-ping"></span>
             </div>
-            
+
             {/* Visual: Rocket launch and signed term sheet */}
             <div className="flex-grow flex flex-col items-center justify-center relative gap-3">
               <motion.div
@@ -296,7 +296,7 @@ export default function Journey() {
                 ★ TERM SHEET SIGNED ★
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 animate={{ y: [-3, 3, -3] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                 className="flex items-center justify-center bg-violet-600 text-white w-14 h-14 rounded-full border-2 border-white shadow-[0_0_15px_#8b5cf6]"
@@ -319,24 +319,24 @@ export default function Journey() {
   return (
     <section className="w-full py-12 px-4 sm:px-8 bg-transparent" id="journey">
       <div className="max-w-6xl mx-auto px-6 py-12 border-[3px] border-black bg-white shadow-neo sm:p-12 relative">
-        
+
         {/* Section Header */}
         <div className="mb-16">
           <span className="neo-badge bg-pink-500 text-white font-extrabold text-xs mb-3">
-            Venture Journey
+            OUR PROCESS
           </span>
           <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter">
-            THE PIPELINE IN ACTION
+            From Discovery to Capital.
           </h2>
         </div>
 
         {/* Story Layout Grid */}
         <div className="journey-sticky-container">
-          
+
           {/* Left sticky visual dashboard panel */}
           <div className="sticky-visual-wrapper">
             <div className="w-full max-w-lg aspect-square lg:aspect-auto lg:h-[480px] bg-[#0f172a] border-[4px] border-black shadow-neo-large p-6 flex flex-col justify-between text-white relative">
-              
+
               {/* Retro design grid marks */}
               <div className="absolute top-2 right-3 font-mono text-[9px] text-white/30 uppercase select-none">
                 vraise_engine_console v2.06

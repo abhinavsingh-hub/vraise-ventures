@@ -27,7 +27,7 @@ export default function Footer({ onNavClick }) {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("contact@vraiseventures.com");
+    navigator.clipboard.writeText("team@vraiseventures.org");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -48,12 +48,15 @@ export default function Footer({ onNavClick }) {
         
         {/* Row 1: Massive CTA Headings & Buttons */}
         <div className="flex flex-col items-center text-center pb-20 border-b border-white/10">
-          <span className="neo-badge bg-yellow-400 text-black font-extrabold text-xs mb-6 shadow-none border-[2.5px] border-black">
-            Get In Touch
+          <span className="neo-badge bg-[#facc15] text-black font-extrabold text-xs mb-6 shadow-none border-[2.5px] border-black">
+            LET’S BUILD TOGETHER
           </span>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-white leading-none tracking-tighter max-w-4xl mb-12">
-            READY TO ACCESS OFF-MARKET DEAL FLOW?
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-white leading-none tracking-tighter max-w-5xl mb-6">
+            Exceptional Companies Deserve Exceptional Partners.
           </h2>
+          <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-12 font-medium">
+            Whether you’re building the next category-defining company or looking for differentiated early-stage opportunities, we’d love to start the conversation.
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {/* Magnetic PITCH US Button */}
@@ -62,10 +65,10 @@ export default function Footer({ onNavClick }) {
               animate={{ x: pitchPos.x, y: pitchPos.y }}
               onMouseMove={(e) => handleMouseMove(e, pitchBtnRef, setPitchPos)}
               onMouseLeave={() => resetPos(setPitchPos)}
-              onClick={() => window.open('mailto:contact@vraiseventures.com')}
+              onClick={() => window.open('mailto:team@vraiseventures.org?subject=Startup Pitch')}
               className="neo-btn neo-btn-primary border-[3.5px] border-black text-sm px-10 py-5 font-black text-white hover:bg-blue-500 shadow-[6px_6px_0px_#000] active:translate-y-[4px] active:shadow-none transition-transform duration-75"
             >
-              PITCH US
+              Pitch Your Startup
               <ArrowUpRight className="w-4 h-4 ml-2" />
             </motion.button>
 
@@ -75,10 +78,10 @@ export default function Footer({ onNavClick }) {
               animate={{ x: partnerPos.x, y: partnerPos.y }}
               onMouseMove={(e) => handleMouseMove(e, partnerBtnRef, setPartnerPos)}
               onMouseLeave={() => resetPos(setPartnerPos)}
-              onClick={() => window.open('mailto:contact@vraiseventures.com')}
+              onClick={() => window.open('mailto:team@vraiseventures.org?subject=Introductory Call Request')}
               className="neo-btn border-[3.5px] border-black text-sm px-10 py-5 font-black text-black bg-white hover:bg-pink-500 hover:text-white shadow-[6px_6px_0px_#000] active:translate-y-[4px] active:shadow-none transition-transform duration-75"
             >
-              PARTNER WITH US
+              Book an Introductory Call
               <ArrowUpRight className="w-4 h-4 ml-2" />
             </motion.button>
           </div>
@@ -87,7 +90,7 @@ export default function Footer({ onNavClick }) {
           <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-full py-2 px-5 max-w-sm w-full justify-between">
             <div className="flex items-center gap-2 font-mono text-xs sm:text-sm text-slate-300">
               <Mail className="w-4 h-4 text-pink-500" />
-              <span>contact@vraiseventures.com</span>
+              <span>team@vraiseventures.org</span>
             </div>
             <button 
               onClick={copyEmail}
@@ -104,7 +107,7 @@ export default function Footer({ onNavClick }) {
           
           {/* Logo Description */}
           <div className="flex flex-col gap-4">
-            <Logo showText={true} className="h-14 text-white" />
+            <Logo className="h-14 text-white" />
             <p className="font-sans text-sm text-slate-400 leading-relaxed font-medium mt-2">
               Bilateral early-stage deal origination firm discovering breakout teams across India, ANZ, and US corridors.
             </p>
@@ -149,6 +152,11 @@ export default function Footer({ onNavClick }) {
           <span className="uppercase tracking-widest text-[#00d2ff]">
             DISCREET UNIVERSITY DEAL ORIGINATION ENGINE
           </span>
+        </div>
+
+        {/* Final Closing Statement */}
+        <div className="text-center font-sans font-black uppercase text-white/50 text-sm sm:text-base tracking-widest pt-8 mt-8 border-t border-white/10 leading-normal select-none">
+          Great companies are built by founders. Great investments begin with discovery.
         </div>
 
       </div>

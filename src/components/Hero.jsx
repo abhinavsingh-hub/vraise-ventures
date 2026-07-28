@@ -19,72 +19,71 @@ export default function Hero({ onNavClick }) {
 
   const cards = [
     {
-      title: "Go8",
-      sub: "Australia",
+      title: "Early Discovery",
+      sub: "Finding exceptional founders before traditional fundraising begins.",
       bg: "bg-blue-100",
       border: "border-blue-600",
       accent: "text-blue-600",
       shadow: "shadow-[6px_6px_0px_#2563eb]",
       svg: (
         <svg viewBox="0 0 100 100" className="w-16 h-16 mb-4 filter drop-shadow-[2px_2px_0px_#000]">
-          <rect x="20" y="30" width="60" height="50" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
-          <path d="M 20,30 L 50,10 L 80,30 Z" fill="#2563eb" stroke="#000" strokeWidth="2.5" />
-          <circle cx="50" cy="55" r="12" fill="#facc15" stroke="#000" strokeWidth="2.5" />
-          <path d="M 50,47 L 50,63 M 42,55 L 58,55" stroke="#000" strokeWidth="2" />
+          <circle cx="45" cy="45" r="20" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
+          <line x1="60" y1="60" x2="80" y2="80" stroke="#000" strokeWidth="4" strokeLinecap="round" />
+          <circle cx="45" cy="45" r="8" fill="#2563eb" stroke="#000" strokeWidth="2" />
         </svg>
       )
     },
     {
-      title: "Ivy League",
-      sub: "United States",
+      title: "Institutional Standards",
+      sub: "Every opportunity is screened before investor introductions.",
       bg: "bg-pink-100",
       border: "border-pink-500",
       accent: "text-pink-500",
       shadow: "shadow-[6px_6px_0px_#ec4899]",
       svg: (
         <svg viewBox="0 0 100 100" className="w-16 h-16 mb-4 filter drop-shadow-[2px_2px_0px_#000]">
-          <path d="M 25,20 L 75,20 L 70,70 L 50,85 L 30,70 Z" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
-          <path d="M 35,30 L 65,30 M 35,45 L 65,45 M 50,30 L 50,70" stroke="#ec4899" strokeWidth="3" />
-          <polygon points="50,60 55,70 45,70" fill="#facc15" stroke="#000" strokeWidth="2" />
+          <path d="M 50,15 C 65,15 75,25 75,45 C 75,65 50,85 50,85 C 50,85 25,65 25,45 C 25,25 35,15 50,15 Z" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
+          <path d="M 40,48 L 47,55 L 62,38" fill="none" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     },
     {
-      title: "IITs & IIMs",
-      sub: "India",
+      title: "Curated Deal Flow",
+      sub: "Quality over quantity. Conviction over volume.",
       bg: "bg-yellow-100",
       border: "border-yellow-500",
       accent: "text-yellow-600",
       shadow: "shadow-[6px_6px_0px_#eab308]",
       svg: (
         <svg viewBox="0 0 100 100" className="w-16 h-16 mb-4 filter drop-shadow-[2px_2px_0px_#000]">
-          <rect x="25" y="25" width="50" height="50" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
-          <line x1="25" y1="25" x2="75" y2="75" stroke="#000" strokeWidth="2.5" />
-          <line x1="75" y1="25" x2="25" y2="75" stroke="#000" strokeWidth="2.5" />
-          <circle cx="50" cy="50" r="16" fill="#facc15" stroke="#000" strokeWidth="2.5" />
-          <polygon points="50,42 58,58 42,58" fill="#2563eb" stroke="#000" strokeWidth="2" />
+          <polygon points="20,25 80,25 60,55 60,80 40,80 40,55" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
+          <polygon points="50,10 53,18 62,18 55,23 57,32 50,27 43,32 45,23 38,18 47,18" fill="#facc15" stroke="#000" strokeWidth="1.5" />
         </svg>
       )
     },
     {
-      title: "Russell Group",
-      sub: "United Kingdom",
+      title: "Global Network",
+      sub: "Universities • Founders • Operators • Investors",
       bg: "bg-emerald-100",
       border: "border-emerald-500",
       accent: "text-emerald-600",
       shadow: "shadow-[6px_6px_0px_#10b981]",
       svg: (
         <svg viewBox="0 0 100 100" className="w-16 h-16 mb-4 filter drop-shadow-[2px_2px_0px_#000]">
-          <rect x="20" y="45" width="60" height="35" rx="5" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
-          <path d="M 30,45 L 30,25 Q 50,15 70,25 L 70,45" fill="none" stroke="#10b981" strokeWidth="3" />
-          <circle cx="50" cy="62" r="8" fill="#ec4899" stroke="#000" strokeWidth="2" />
+          <circle cx="50" cy="50" r="30" fill="#ffffff" stroke="#000" strokeWidth="2.5" />
+          <line x1="20" y1="50" x2="80" y2="50" stroke="#10b981" strokeWidth="2" strokeDasharray="3 3" />
+          <line x1="50" y1="20" x2="50" y2="80" stroke="#10b981" strokeWidth="2" strokeDasharray="3 3" />
+          <circle cx="50" cy="20" r="6" fill="#10b981" stroke="#000" strokeWidth="2" />
+          <circle cx="50" cy="80" r="6" fill="#10b981" stroke="#000" strokeWidth="2" />
+          <circle cx="20" cy="50" r="6" fill="#10b981" stroke="#000" strokeWidth="2" />
+          <circle cx="80" cy="50" r="6" fill="#10b981" stroke="#000" strokeWidth="2" />
         </svg>
       )
     }
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between pb-12 pt-28 border-b-4 border-black bg-transparent">
+    <section className="relative w-full min-h-screen flex flex-col justify-between pb-12 pt-28 border-b-4 border-black bg-transparent" style={{ marginTop: '40px' }}>
       {/* Floating Header */}
       <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b-[3px] border-black z-40 px-4 sm:px-8 py-3">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -117,18 +116,7 @@ export default function Hero({ onNavClick }) {
 
       {/* Hero Body Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col items-center text-center mt-8">
-        {/* Top Badges / Subtitle */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-6"
-        >
-          <span className="neo-badge bg-blue-100 text-blue-600 font-extrabold text-xs tracking-[0.2em] px-4 py-1.5 animate-pulse">
-            we scout • we build • we raise
-          </span>
-        </motion.div>
-
+        
         {/* Giant Heading */}
         <div className="relative mb-8 max-w-5xl">
           {/* Floating Bubble Left */}
@@ -165,16 +153,25 @@ export default function Hero({ onNavClick }) {
           </motion.div>
         </div>
 
-        {/* Sticker tags (tilted stickers) */}
-        <div className="flex flex-wrap gap-3 justify-center mb-10 max-w-3xl">
-          <motion.div custom={{ r: -3, d: 3 }} variants={floatVariants} animate="animate" className="neo-badge bg-pink-500 text-white font-extrabold rotate-[-3deg] shadow-neo">
-            Campus Discovery
+        {/* Stacked Tilted Tags Tagline (Reference Image Format) */}
+        <div className="flex flex-col items-center gap-3 mb-10 select-none scale-[0.8] sm:scale-95 md:scale-100">
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            className="px-10 py-3 bg-[#3b82f6] border-[3.5px] border-black text-white font-black text-3xl sm:text-5xl uppercase tracking-wider shadow-[5px_5px_0px_#000] rotate-[1.5deg]"
+          >
+            WE SCOUT
           </motion.div>
-          <motion.div custom={{ r: 2, d: 3.5 }} variants={floatVariants} animate="animate" className="neo-badge bg-blue-600 text-white font-extrabold rotate-[2deg] shadow-neo">
-            IC Readiness
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            className="px-10 py-3 bg-[#facc15] border-[3.5px] border-black text-[#0f172a] font-black text-3xl sm:text-5xl uppercase tracking-wider shadow-[5px_5px_0px_#000] rotate-[-1.2deg] -mt-2"
+          >
+            WE BUILD
           </motion.div>
-          <motion.div custom={{ r: -1, d: 2.8 }} variants={floatVariants} animate="animate" className="neo-badge bg-yellow-400 text-slate-900 font-extrabold rotate-[-1deg] shadow-neo">
-            Investor Access
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            className="px-10 py-3 bg-[#ec4899] border-[3.5px] border-black text-white font-black text-3xl sm:text-5xl uppercase tracking-wider shadow-[5px_5px_0px_#000] rotate-[2deg] -mt-2"
+          >
+            WE RAISE
           </motion.div>
         </div>
 
@@ -215,8 +212,8 @@ export default function Hero({ onNavClick }) {
               className={`p-6 border-[3px] border-black flex flex-col items-center text-center ${c.bg} ${c.shadow} hover:translate-y-[-4px] hover:shadow-neo-large transition-all`}
             >
               {c.svg}
-              <h3 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1">{c.title}</h3>
-              <span className={`font-mono text-xs font-bold uppercase tracking-wider ${c.accent}`}>{c.sub}</span>
+              <h3 className="text-lg sm:text-xl font-black text-[#0f172a] mb-2">{c.title}</h3>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium font-sans leading-tight">{c.sub}</p>
             </motion.div>
           ))}
         </div>
@@ -224,3 +221,4 @@ export default function Hero({ onNavClick }) {
     </section>
   );
 }
+

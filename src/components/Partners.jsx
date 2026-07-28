@@ -12,15 +12,15 @@ export default function Partners() {
   return (
     <section className="w-full py-8 px-4 sm:px-8 bg-transparent" id="partners">
       <div className="max-w-6xl mx-auto px-6 py-10 border-[3px] border-black bg-white shadow-neo sm:p-10 relative flex flex-col items-center">
-        <span className="neo-badge bg-blue-100 text-blue-600 font-extrabold text-[10px] tracking-wider mb-6">
-          Partner Network
+        <span className="neo-badge bg-[#ec4899] text-white font-extrabold text-[10px] tracking-wider mb-6">
+          TRUSTED BY
         </span>
-        <h3 className="text-xl sm:text-2xl font-black uppercase text-[#0f172a] mb-8 font-sans tracking-tight text-center">
-          Some of Our Partner Funds & Syndicates
+        <h3 className="text-2xl sm:text-4xl font-black uppercase text-[#0f172a] mb-8 font-sans tracking-tight text-center">
+          Working Alongside Leading Venture Investors.
         </h3>
         
         {/* Logos Grid */}
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center mb-8">
           {funds.map((f, i) => (
             <motion.div
               key={i}
@@ -35,6 +35,11 @@ export default function Partners() {
             </motion.div>
           ))}
         </div>
+
+        {/* Subtext below logos */}
+        <p className="text-center text-slate-600 font-bold max-w-2xl text-xs sm:text-sm uppercase tracking-wide leading-relaxed font-mono mt-4">
+          Building long-term relationships with venture capital firms, angel syndicates, and institutional investors across multiple markets.
+        </p>
       </div>
     </section>
   );

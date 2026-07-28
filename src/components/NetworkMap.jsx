@@ -103,17 +103,41 @@ export default function NetworkMap() {
       <div className="max-w-6xl mx-auto px-6 py-12 border-[3px] border-black bg-white shadow-neo sm:p-12 relative flex flex-col items-center">
         
         {/* Section Title */}
-        <div className="text-center mb-16 max-w-3xl">
+        <div className="text-center mb-10 max-w-4xl">
           <div className="mb-4">
             <span className="neo-badge bg-yellow-400 text-[#0f172a] font-extrabold text-xs">
-              Scouting Network
+              GLOBAL PRESENCE
             </span>
           </div>
           <h2 className="text-4xl sm:text-6xl font-black uppercase text-[#0f172a] leading-none tracking-tighter mb-6">
-            CONNECTED ECOSYSTEM
+            Embedded Where Innovation Begins.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 font-medium">
-            Hover over the nodes below to trace the connection channels between our campus founders and global venture systems.
+          <p className="text-base sm:text-lg text-slate-600 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
+            VRaise’s distributed scout network operates across leading universities, research institutions, founder communities, and startup ecosystems—creating early access to exceptional entrepreneurs before they reach the broader market.
+          </p>
+
+          {/* Metrics Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="p-4 border-[2.5px] border-black bg-blue-50 shadow-[3px_3px_0px_#000] text-center">
+              <h4 className="text-3xl sm:text-4xl font-black text-[#0f172a] mb-1">100+</h4>
+              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Startups Reviewed</p>
+            </div>
+            <div className="p-4 border-[2.5px] border-black bg-pink-50 shadow-[3px_3px_0px_#000] text-center">
+              <h4 className="text-3xl sm:text-4xl font-black text-[#0f172a] mb-1">5+</h4>
+              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">VC Partners</p>
+            </div>
+            <div className="p-4 border-[2.5px] border-black bg-yellow-50 shadow-[3px_3px_0px_#000] text-center">
+              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1.5 pt-1.5">India & Australia</h4>
+              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Regional Hubs</p>
+            </div>
+            <div className="p-4 border-[2.5px] border-black bg-emerald-50 shadow-[3px_3px_0px_#000] text-center">
+              <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] mb-1.5 pt-1.5">Pre-Seed • Seed</h4>
+              <p className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-wider">Stage Focus</p>
+            </div>
+          </div>
+
+          <p className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+            Interactive Network Map (Hover nodes to trace)
           </p>
         </div>
 
